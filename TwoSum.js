@@ -30,13 +30,14 @@ Output: [0,1*/
  * @return {number[]}
  */
 var twoSum = function (nums, target) {
-  let map = new Map();
+  let map = new Map(); // defining a new map
   for (let i = 0; i < nums.length; i++) {
     const compliment = target - nums[i];
     if (map.has(compliment)) {
-      return [i, map.get(compliment)];
+      // if the map contains the number in the array after substracting from the target number
+      return [i, map.get(compliment)]; // return array with the indexes
     } else {
-      map.set(nums[i], i);
+      map.set(nums[i], i); // continuation of the loop
     }
   }
 };
